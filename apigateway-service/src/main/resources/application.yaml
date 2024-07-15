@@ -5,7 +5,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://k10a508.p.ssafy.io:8083/eureka
+      defaultZone: http://t1101.p.ssafy.io:8083/eureka
 
   instance:
     hostname: 43.202.53.115
@@ -67,9 +67,9 @@ spring:
               - 'http://localhost:3000'
               - 'http://localhost:8081'
               -  'http://localhost:8084'
-              -  'http://k10a508.p.ssafy.io'
-              - 'http://k10a508.p.ssafy.io:3000'
-              -  'https://k10a508.p.ssafy.io'
+              -  'http://t1101.p.ssafy.io'
+              - 'http://t1101.p.ssafy.io:3000'
+              -  'https://t1101.p.ssafy.io'
             allow-credentials: true # 요청 시 인증 정보를 전송하도록 허가
             allowedHeaders: '*' # 허용하려는 헤더
             allowedMethods: # 허용하려는 HTTP 메서드
