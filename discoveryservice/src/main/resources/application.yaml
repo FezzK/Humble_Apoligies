@@ -10,6 +10,6 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://k10a508.p.ssafy.io:8083/eureka
+      defaultZone: http://t1101.p.ssafy.io:8083/eureka
 
 
