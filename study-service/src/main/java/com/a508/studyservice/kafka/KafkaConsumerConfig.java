@@ -19,8 +19,8 @@ public class KafkaConsumerConfig {
     @Bean
     public ConsumerFactory<String, NotificationMessage> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "k10a508.p.ssafy.io:9092");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "study-group");
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "당신의 호스트주소와  kafka 포트를 입력하세요!");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "그룹 이름 넣으세요");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         // 클래스 정보 무시 설정
