@@ -57,8 +57,6 @@ public class TodayLearningServiceImpl implements TodayLearningService {
         if( token != null && token.length() >25) {
             String actualToken = token.substring(7);
             userId = userServiceFeignClient.getUserId(actualToken);}
-        log.info("userId = " + userId );
-        log.info(" token 정보가 들어옵니다. ");
             List<String> personalCategories = new ArrayList<>();
             /*
             Feign 을 통한 token 로직 추가되어야 함.
@@ -84,10 +82,7 @@ public class TodayLearningServiceImpl implements TodayLearningService {
                 todayLearningResponses.add(dummy3);
                 newbie(userId,personalCategories);
                     return todayLearningResponses;
-            } else{
-                log.info(" 오늘의 학습 조회가 성공적으로 이루어졌습니다. ");
             }
-
             TreeSet<String> treeSet = new TreeSet<>();
 
             for(TodayLearning todayLearning : todayLearnings)treeSet.add(todayLearning.getType());
@@ -142,14 +137,11 @@ public class TodayLearningServiceImpl implements TodayLearningService {
             monthResponses.add(value);
         }
 
-        log.info("반환하는 값은 : " + monthResponses);
         return monthResponses;
     }
 
     @Override
     public List<DayResponse> getDays(LocalDateTime dateTime, String token) {
-        log.info( "Day 데이터를 받아옵니다 요청자 : " + token);
-        log.info(dateTime.toString());
         int userid = userServiceFeignClient.getUserId(token);
         List<DayResponse> dayResponses = new ArrayList<>();
 
@@ -370,9 +362,6 @@ public class TodayLearningServiceImpl implements TodayLearningService {
         List<SentenceInsert> sentenceInsertList = sentenceInsertRepository.findByCategory(sec);
         List<TopicProblem> topicProblemList = topicRepository.findByCategory(thi);
 
-        log.info( "정독훈련의 문제들의 값이 들어온지 : " +(intensiveList.size()));
-        log.info("정독훈련의 문제들의 값이 들어온지 : "+ (sentenceInsertList.size()));
-        log.info("정독훈련의 문제들의 값이 들어온지 : "+ (topicProblemList.size()));
         for(int idx = 0 ; idx < 3 ; idx++){
             todayLearningRepository.save(makeEntity(userId, intensiveList.get(idx).getId(), "정독훈련", fir));
             todayLearningRepository.save(makeEntity(userId, sentenceInsertList.get(idx).getId(), "문장삽입", fir));

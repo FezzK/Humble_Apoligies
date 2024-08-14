@@ -54,7 +54,6 @@ public class ChoiceSolvedServiceImpl implements ChoiceSolvedService {
 		}
 		else throw  new BaseException(ErrorCode.EXIST_TOKEN_ERROR);
 
-		log.info("객관식 문제 정답을 제출한 사람은 : " + (userId));
 
 		String type = choiceRequest.getType();
 

@@ -27,9 +27,7 @@ public class NotificationService {
     private final Long DEFAULT_TIMEOUT = 60L * 1000 * 60;
 
 
-    public void init2() {
-        log.info(notifications.get("8").toString());
-    }
+    public void init2() {}
 
     public void init(List<StudyTimeFeignResponse> input) {
         for (StudyTimeFeignResponse response : input) {
