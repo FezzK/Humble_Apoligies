@@ -21,7 +21,7 @@ spring:
       port: 6379
   kafka:
     producer:
-      bootstrap-servers: k10a508.p.ssafy.io:9092
+      bootstrap-servers: 당신의 호스트주소와  kafka 포트를 입력하세요!
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
 
