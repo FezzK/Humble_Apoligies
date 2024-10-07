@@ -2,7 +2,7 @@
 
 심심한 사과: 문해력 상승을 위한 다섯 가지 유형의 사용자 맞춤 문해력 학습 및 실시간 어휘 퀴즈 대결 플랫폼
 <br><br>
-<img width="400" src="https://lab.ssafy.com/s10-final/S10P31A508/-/raw/main/docs/logo.png">
+<img width="400" src="https://github.com/FezzK/Humble_Apoligies/blob/main/docs/logo.png">
 
 > https://k10a508.p.ssafy.io/
 
